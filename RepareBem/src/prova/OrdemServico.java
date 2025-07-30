@@ -25,6 +25,9 @@ public class OrdemServico {
 
 	
 	public void incluirReparo(Reparo novoReparo) {
+		if (indiceReparos >= LIMITE_REPAROS)
+			return;
+		
 		if (existReparo(novoReparo)) 
 			return;
 		
